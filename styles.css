@@ -1,0 +1,93 @@
+:root {
+    /* Colors */
+    --main-color: #222831;
+    --secondary-color: #CF3030;
+    --font-color: #D9D9D9;
+
+    /* Font sizes */
+    --content-font-size: 20;
+    --footer-font-size: 16;
+    --logo-font-size: 25;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Hind Siliguri', serif;
+    color: var(--font-color);
+    height: 100vh;
+    display: flex;
+}
+
+/* Sidebar and content styles */
+#content, #sidebar {
+    height: 100%;
+    overflow: scroll;
+}
+
+/* Content styles */
+#content {
+    background-color: var(--main-color);
+    width: 75%;
+}
+
+.content-section {
+    padding: 80px;
+    padding-bottom: 20px;
+}
+
+.content-section-title {
+    margin-bottom: 100px;
+}
+
+.content-section .content-section-body {
+    margin-top: 100px;
+    font-size: var(--content-font-size);
+}
+
+.content-section .content-section-footer {
+    margin-top: 150px;
+    font-size: var(--footer-font-size);
+}
+
+/* Sidebar stles */
+#sidebar {
+    background-color: var(--secondary-color);
+    width: 25%;
+}
+
+#sidebar-content {
+    padding: 80px 0;
+}
+
+#sidebar-logo {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+#sidebar-options {
+    font-size: var(--content-font-size);
+    list-style-type: none;
+    margin-bottom: 100px;
+}
+
+#sidebar-options li {
+    padding: 0 40px;
+
+}
+
+#sidebar-options li:hover {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+#contact-logos {
+    text-align: center;
+    font-size: var(--logo-font-size);
+    display: flex;
+    justify-content: space-evenly;
+
+}
