@@ -79,15 +79,16 @@ body {
 
 }
 
-#sidebar-options li:hover {
-    color: var(--main-color);
-    font-weight: bold;
-}
-
 #contact-logos {
     text-align: center;
     font-size: var(--logo-font-size);
     display: flex;
     justify-content: space-evenly;
+}
 
+#sidebar h1:hover,
+#contact-logos i:hover,
+#sidebar-options li:hover {
+    color: var(--main-color);
+    font-weight: bold;
 }
