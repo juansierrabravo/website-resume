@@ -22,8 +22,6 @@
 body {
     font-family: 'Hind Siliguri', serif;
     color: var(--font-color);
-    min-height: 100vh;
-    display: flex;
 }
 
 hr {
@@ -33,13 +31,13 @@ hr {
     margin: 10px 0;
 }
 
-/* Sidebar and content styles */
-#content, #sidebar {
-    min-height: 100%;
+#wrapper {
+    display: flex;
 }
 
 /* Content styles */
 #content {
+    min-height: 100vh;
     background-color: var(--main-color);
     width: 75%;
 }
@@ -90,6 +88,9 @@ hr {
 
 /* Sidebar stles */
 #sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
     background-color: var(--secondary-color);
     width: 25%;
     padding: 80px 0 20px 0;
