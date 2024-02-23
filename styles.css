@@ -63,11 +63,19 @@ hr {
     flex-grow: 1;
 }
 
-.content-section-body.body-with-footer {
+.content-section-body.body-with-footer,
+.content-section-body.multiple-column {
     display: flex;
+    gap: 100px;
+}
+
+.content-section-body.body-with-footer {
     flex-direction: column;
     justify-content: space-between;
-    gap: 100px;
+}
+
+.content-section-body.multiple-column {
+    flex-direction: row;
 }
 
 .content-section .container-footer {
@@ -84,6 +92,10 @@ hr {
 
 .experience-event p.date {
     text-align: right;
+}
+
+p.score {
+    color: var(--secondary-color);
 }
 
 /* Sidebar stles */
