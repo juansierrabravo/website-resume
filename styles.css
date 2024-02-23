@@ -26,6 +26,13 @@ body {
     display: flex;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--font-color);
+    margin: 10px 0;
+}
+
 /* Sidebar and content styles */
 #content, #sidebar {
     min-height: 100%;
@@ -67,6 +74,18 @@ body {
 
 .content-section .container-footer {
     font-size: var(--footer-font-size);
+}
+
+.experience-event {
+    margin-bottom: 80px;
+}
+
+.experience-event .event-bullet {
+    margin-bottom: 15px;
+}
+
+.experience-event p.date {
+    text-align: right;
 }
 
 /* Sidebar stles */

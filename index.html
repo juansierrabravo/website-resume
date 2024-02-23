@@ -8,7 +8,7 @@
     </head>
     <body>
         <div id="content">
-            <div id="home" class="content-section active">
+            <div id="home" class="content-section">
                 <h1 class="content-section-title">Welcome</h1>
 
                 <div class="content-section-body body-with-footer">
@@ -52,24 +52,88 @@
                     </p>
                 </div>
             </div>
-            <div id="experience" class="content-section active">
-                <h1 class="content-section-title">My experience</h1>
+            <div id="dev-experience" class="content-section active">
+                <h1 class="content-section-title">My experience as developer</h1>
 
                 <div class="content-section-body">
-                    <div class="resume-event">
+                    <div class="experience-event">
                         <h3>Junior Developer @ LSV - TECH</h3>
                         <p>feb 2023 - current</p>
                         <hr>
-                        <p>
-                            <strong>Backend Developer (Django):</strong> I contributed to the development of a demo 
-                            web application aimed at optimizing business processes. We designed the 
-                            backend architecture using Django Rest Framework, implementing ticket, 
-                            contact, and calendar systems.
-                        </p>
+                        <div class="event-bullet">
+                            <p>
+                                <strong>Backend Developer (Django):</strong> I contributed to the development of a demo 
+                                web application aimed at optimizing business processes. We designed the 
+                                backend architecture using Django Rest Framework, implementing ticket, 
+                                contact, and calendar systems.
+                            </p>
+                            <p class="date">oct 2023 - jan 2024</p>
+                        </div>
+                        <div class="event-bullet">
+                            <p>
+                                <strong>Backend Developer (Flask):</strong> We developed a resume processing system with AI, 
+                                leveraging OpenAI's GPT-3.5 model. We ensured efficient background execution using Celery. 
+                                We used Docker for optimal deployment, and hosted the database on PostgreSQL.
+                            </p>
+                            <p class="date">sep 2023</p>
+                        </div>
+                        <div class="event-bullet">
+                            <p>
+                                <strong>Backend Developer (Django):</strong> We designed a versatile system for creating custom chatbots using
+                                a question-and-answer tree structure. Additionally, it enables communication via WhatsApp through 
+                                Twilio.
+                            </p>
+                            <p class="date">may 2023 - ago 2023</p>
+                        </div>
+                        <div class="event-bullet">
+                            <p>
+                                <strong>Frontend Developer (ReactTS):</strong> We created an innovative application that simplifies the search 
+                                for lost or found pets, incorporating Google Maps, Google Places, geolocation, and a feature for leaving
+                                comments at pet-friendly locations.
+                            </p>
+                            <p class="date">feb 2023 - may 2023</p>
+                        </div>
                     </div>
-                    
+
+                    <div class="experience-event">
+                        <h3>Systems and Processes Analyst @ LSV - TECH</h3>
+                        <p>oct 2022 - feb 2023</p>
+                        <hr>
+                        <div class="event-bullet">
+                            <p>
+                                As an analyst, I supported various initiatives during the requirements gathering process, following the
+                                SCRUM methodology, from client discussions to the creation of user stories.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="experience-event">
+                        <h3>Professional Trainee @ LSV - TECH</h3>
+                        <p>dec 2021 - oct 2022</p>
+                        <hr>
+                        <div class="event-bullet">
+                            <p>
+                                I was part of the Fullstack Bootcamp named CAR IV, where intensive courses in soft skills and web
+                                development were taught, incluing technologies such as Django and ReactJS.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="experience-event">
+                        <h3>Freelancer @ Self-employed</h3>
+                        <p>feb 2020 - dec 2021</p>
+                        <hr>
+                        <div class="event-bullet">
+                            <p>
+                                As a freelancer, I specialized in developing algorithms for process automation in Python, implementing
+                                web scraping with Selenium and BeautifulSoup, and conducting Backend development using Django.
+                                Additionally, I designed and implemented custom functionalities on the frontend using JavaScript.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div id="other-experience" class="content-section"></div>
             <div id="skills" class="content-section"></div>
             <div id="languages" class="content-section"></div>
             <div id="education" class="content-section"></div>
@@ -82,7 +146,8 @@
             <div id="sidebar-content">
                 <ul id="sidebar-options">
                     <li>About me</li>
-                    <li>My experience</li>
+                    <li>Developer experience</li>
+                    <li>Other experience</li>
                     <li>Skills</li>
                     <li>Languages</li>
                     <li>Education</li>
