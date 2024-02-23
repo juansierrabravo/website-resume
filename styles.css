@@ -10,6 +10,10 @@
     --logo-font-size: 25;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -18,14 +22,13 @@
 body {
     font-family: 'Hind Siliguri', serif;
     color: var(--font-color);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
 }
 
 /* Sidebar and content styles */
 #content, #sidebar {
-    height: 100%;
-    overflow: scroll;
+    min-height: 100%;
 }
 
 /* Content styles */
@@ -35,8 +38,11 @@ body {
 }
 
 .content-section {
+    min-height: 100%;
     padding: 80px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-section-title {
@@ -44,12 +50,15 @@ body {
 }
 
 .content-section .content-section-body {
-    margin-top: 100px;
     font-size: var(--content-font-size);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
 }
 
-.content-section .content-section-footer {
-    margin-top: 150px;
+.content-section .container-footer {
     font-size: var(--footer-font-size);
 }
 
@@ -57,10 +66,9 @@ body {
 #sidebar {
     background-color: var(--secondary-color);
     width: 25%;
-}
-
-#sidebar-content {
-    padding: 80px 0;
+    padding: 80px 0 20px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #sidebar-logo {
@@ -68,15 +76,23 @@ body {
     text-align: center;
 }
 
+#sidebar-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: space-between;
+}
+
 #sidebar-options {
     font-size: var(--content-font-size);
     list-style-type: none;
-    margin-bottom: 100px;
 }
+
+
 
 #sidebar-options li {
     padding: 0 40px;
-
 }
 
 #contact-logos {
