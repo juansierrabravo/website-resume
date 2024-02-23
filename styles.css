@@ -22,17 +22,22 @@
 body {
     font-family: 'Hind Siliguri', serif;
     color: var(--font-color);
-    min-height: 100vh;
-    display: flex;
 }
 
-/* Sidebar and content styles */
-#content, #sidebar {
-    min-height: 100%;
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--font-color);
+    margin: 10px 0;
+}
+
+#wrapper {
+    display: flex;
 }
 
 /* Content styles */
 #content {
+    min-height: 100vh;
     background-color: var(--main-color);
     width: 75%;
 }
@@ -69,8 +74,23 @@ body {
     font-size: var(--footer-font-size);
 }
 
+.experience-event {
+    margin-bottom: 80px;
+}
+
+.experience-event .event-bullet {
+    margin-bottom: 15px;
+}
+
+.experience-event p.date {
+    text-align: right;
+}
+
 /* Sidebar stles */
 #sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
     background-color: var(--secondary-color);
     width: 25%;
     padding: 80px 0 20px 0;
