@@ -98,6 +98,35 @@ p.score {
     color: var(--secondary-color);
 }
 
+#skills-options {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#skills-options .skill-option.skill-selected {
+    border-bottom: solid;
+    border-color: var(--font-color);
+    border-width: 1px;
+}
+
+#skills-content .skill-content {
+    display: none;
+}
+
+#skills-content .skill-content.skill-selected {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#skills-content div.skill .skill-logo {
+    width: 120px;
+}
+
 /* Sidebar stles */
 #sidebar {
     height: 100vh;
