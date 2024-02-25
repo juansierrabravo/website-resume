@@ -55,7 +55,7 @@ hr {
 }
 
 .content-section-title {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .content-section .content-section-body {
@@ -63,11 +63,19 @@ hr {
     flex-grow: 1;
 }
 
-.content-section-body.body-with-footer {
+.content-section-body.body-with-footer,
+.content-section-body.multiple-column {
     display: flex;
+    gap: 100px;
+}
+
+.content-section-body.body-with-footer {
     flex-direction: column;
     justify-content: space-between;
-    gap: 100px;
+}
+
+.content-section-body.multiple-column {
+    flex-direction: row;
 }
 
 .content-section .container-footer {
@@ -86,6 +94,43 @@ hr {
     text-align: right;
 }
 
+p.score {
+    color: var(--secondary-color);
+}
+
+#skills-options {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#skills-options .skill-option.skill-selected {
+    border-bottom: solid;
+    border-color: var(--font-color);
+    border-width: 1px;
+}
+
+#skills-content .skill-content {
+    display: none;
+}
+
+#skills-content .skill-content.skill-selected {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#skills-content div.skill .skill-logo {
+    width: 120px;
+}
+
+#skills-content div.skill p {
+    text-align: center;
+}
+
 /* Sidebar stles */
 #sidebar {
     height: 100vh;
@@ -99,7 +144,7 @@ hr {
 }
 
 #sidebar-logo {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     text-align: center;
 }
 
@@ -114,10 +159,42 @@ hr {
 #sidebar-options {
     font-size: var(--content-font-size);
     list-style-type: none;
+    display: grid;
 }
 
 #sidebar-options li {
     padding: 0 40px;
+    padding: 0.6rem 1rem;
+    margin-right: 1.2rem;
+    border-radius: 0 30vw 30vw 0;
+}
+
+#sidebar-options li.active {
+    background-color: var(--main-color);
+    position: relative;
+}
+
+#sidebar-options li.active::before,
+#sidebar-options li.active::after {
+    --border-radius: 1rem;
+    content: "";
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    left: 0;
+    background: var(--secondary-color);
+}
+
+#sidebar-options li.active::before {
+    top: calc(var(--border-radius) * -1);
+    border-radius: 0 0 0 100vw;
+    box-shadow:  -10px 10px 0 10px var(--main-color);
+}
+
+#sidebar-options li.active::after {
+    bottom: calc(var(--border-radius) * -1);
+    border-radius: 100vw 0 0 0;
+    box-shadow:  -10px -10px 0 10px var(--main-color);
 }
 
 #contact-icons {
@@ -132,4 +209,8 @@ hr {
 #sidebar-options li:hover {
     color: var(--main-color);
     font-weight: bold;
+}
+
+#sidebar-options li.active:hover {
+    color: var(--font-color);
 }
