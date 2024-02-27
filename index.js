@@ -6,14 +6,14 @@ addSidebarItemsClickEvent()
 function addSidebarItemsClickEvent() {
     for (const item of sidebarItems) {
         item.addEventListener('click', function () {
-            cleanSelectedOption()
+            cleanSelectedSidebarOption()
             item.classList.add('active');
             showSelectedContent(item)
         });
     }
 }
 
-function cleanSelectedOption() {
+function cleanSelectedSidebarOption() {
     for (const item of sidebarItems) {
         item.classList.remove('active');
     }
@@ -36,8 +36,42 @@ function cleanSelectedContent() {
 }
 
 
+const skillsOptions = document.getElementById('skills-options');
+const skillsItems = skillsOptions.getElementsByTagName('li');
 
+addSkillsOptionsEvent()
 
+function addSkillsOptionsEvent() {
+    for (const item of skillsItems) {
+        item.addEventListener('click', function () {
+            cleanSelectedSkillOption()
+            item.classList.add('active');
+            showSelectedSkills(item)
+        });
+    }
+}
+
+function cleanSelectedSkillOption() {
+    for (const item of skillsItems) {
+        item.classList.remove('active');
+    }
+}
+
+function showSelectedSkills(item) {
+    cleanSelectedSKills()
+
+    const skillsId = item.id.replace("option", "content")
+    const skillsContainer = document.getElementById(skillsId)
+
+    skillsContainer.classList.add("active")
+}
+
+function cleanSelectedSKills() {
+    const skillsContent = document.getElementsByClassName("skill-content");
+    for (const content of skillsContent) {
+        content.classList.remove("active");
+    }
+}
 
 
 
