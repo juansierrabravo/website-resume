@@ -38,7 +38,6 @@ function cleanSelectedContent() {
 
 const skillsOptions = document.getElementById('skills-options');
 const skillsItems = skillsOptions.getElementsByTagName('li');
-console.log(skillsItems)
 
 addSkillsOptionsEvent()
 
