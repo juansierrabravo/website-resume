@@ -2,7 +2,7 @@
     /* Colors */
     --main-color: #222831;
     --secondary-color: #CF3030;
-    --third-color: #474F7A;
+    --third-color: #2D3250;
     --font-color: #D9D9D9;
 
     /* Font sizes */
@@ -102,6 +102,10 @@ p.score {
     color: var(--secondary-color);
 }
 
+#skills {
+    padding-bottom: 0;
+}
+
 #skills-options {
     list-style-type: none;
     display: flex;
@@ -109,17 +113,9 @@ p.score {
     justify-content: space-around;
 }
 
-/*
-#skills-options .skill-option.active {
-    border-bottom: solid;
-    border-color: var(--font-color);
-    border-width: 1px;
-}
-*/
-
 #skills-options li {
     --radius: 0.7vw;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.8rem;
     border-radius: var(--radius) var(--radius) 0 0;
 }
 
@@ -155,12 +151,12 @@ p.score {
     flex-grow: 1;
     background-color: var(--third-color);
     border-radius: 1vw 1vw 0 0;
+    padding: 1em;
+    padding-bottom: 1.5em;
 }
 
 #skills-content .skill-content {
     display: none;
-
-    padding: 1em;
 }
 
 #skills-content .skill-content.active {
